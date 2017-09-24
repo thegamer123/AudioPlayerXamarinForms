@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:test99"
+             x:Class="test99.MainPage">
+
+
+    <!--<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Fill">
+        <Button Text="kick"
+				Command="{Binding PlayPauseCommand}" x:Name="kickBtn"  />
+        <Button Text="Snare"
+				Command="{Binding PlaySnareCommand}" x:Name="snareBtn" />
+
+
+    </StackLayout>-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+  
+
+
+        <!-- add what you want here , i choose Image but you can choose Button or what ever you want Rq : always add the Command in the ViewModel-->
+        
+        
+        <Image Source="https://i.pinimg.com/736x/a4/07/44/a407442500ac7094310934a5acd39983--snare-drum.jpg" Grid.Row="0" Grid.Column="0" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+            Command="{Binding PlayPauseCommand}"
+           />
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image Source="https://www.sweetwater.com/insync/media/2015/07/Screen-Shot-2015-07-16-at-7.37.11-PM-530x450.png" Grid.Row="0" Grid.Column="1" >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer
+            Command="{Binding PlaySnareCommand}"
+           />
+            </Image.GestureRecognizers>
+        </Image>
+
+
+    </Grid>
+
+
+
+
+</ContentPage>
